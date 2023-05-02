@@ -2,6 +2,10 @@ import SketchPad from './SketchPad';
 
 function App() {
 
+  const undo = () => {
+
+  }
+
   return (
     <>
       <div className="flex-col bg-primary h-screen text-center">
