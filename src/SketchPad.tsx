@@ -6,7 +6,6 @@ const SketchPad = (props: {className: any, width: string, height: string, childr
 
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const paths: PathShape[][] = [];
-    const path: PathShape[] = [];
 
     let isDrawing = false;
 
@@ -57,7 +56,6 @@ const SketchPad = (props: {className: any, width: string, height: string, childr
         for(let i = 0; i < paths.length; i++){
             drawPath.path(ctx!, paths[i]);
         }
-        console.log(paths.length);
     }
 
     const getMouse = (evt: MouseEvent) => {
@@ -70,9 +68,7 @@ const SketchPad = (props: {className: any, width: string, height: string, childr
 
     return (
         <>
-            <canvas ref={canvasRef} className={props.className} width={props.width} height={props.height}>
-
-            </canvas>
+            <canvas ref={canvasRef} className={props.className} width={props.width} height={props.height} />
         </>
     );
 }
